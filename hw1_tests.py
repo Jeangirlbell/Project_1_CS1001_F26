@@ -21,34 +21,34 @@ class TestHomework1(unittest.TestCase):
 
     # Part 1: vowel_count
     def test_vowel_count_case_insensitive(self):
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
+        self.assertEqual(hw1.vowel_count("Apple"),2)
         self.fail("TODO: write the first unit test for vowel_count")
 
     def test_vowel_count_empty_string(self):
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
+        self.assertEqual(hw1.vowel_count("",0))
         self.fail("TODO: write the second unit test for vowel_count")
 
     # Part 2: short_lists
     def test_short_lists_mixed_lengths(self):
-        # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
+        self.assertEqual(hw1.short_lists([[1], [2, 3], [], [4, 5, 6], [7, 8]]),[[2, 3], [7, 8]])
         self.fail("TODO: write the first unit test for short_lists")
 
     def test_short_lists_no_matching_lengths(self):
-        # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
+        self.assertEqual(hw1.short_lists([1],[],[1,2,3]),[])
         self.fail("TODO: write the second unit test for short_lists")
 
     # Part 3: ascending_pairs
     def test_ascending_pairs_reversed_pairs(self):
-        # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
+        self.assertEqual(hw1.ascending_pairs([[9, 2], [3, 1, 2], [5, 5]]),[[2, 9], [3, 1, 2], [5, 5]])
         self.fail("TODO: write the first unit test for ascending_pairs")
 
     def test_ascending_pairs_other_lengths_unchanged(self):
-        # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
+        self.assertEqual(hw1.ascending_pairs([[1,2],[3,4]],[1,2],[3,4]))
         self.fail("TODO: write the second unit test for ascending_pairs")
 
     # Part 4: add_prices
     def test_add_prices_no_cents_carry(self):
-        # TODO: Arrange inputs, call hw1.add_prices, and assert the result.
+        self.assertEqual(hw1.add_prices(data.Price(3, 75), data.Price(2, 50)),data. Price(6, 25))
         self.fail("TODO: write the first unit test for add_prices")
 
     def test_add_prices_with_cents_carry(self):

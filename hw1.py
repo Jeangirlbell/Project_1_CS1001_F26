@@ -12,37 +12,42 @@ import data
 
 # Part 1: vowel_count
 def vowel_count(text: str) -> int:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
+    count=0
+    v="AEIOUaeiou"
+    for c in text:
+        if c in v:
+            count+=1
+    return count 
     raise NotImplementedError("Part 1: implement vowel_count")
 
 
 # Part 2: short_lists
 def short_lists(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
+    return [v for v in list if len(v)==2 ]
     raise NotImplementedError("Part 2: implement short_lists")
 
 
 # Part 3: ascending_pairs
 def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
+    result=[]
+    for i in items:
+        if len(i)==2:
+            r=[]
+            if i[0]>i[1]:
+                r.append(i[1])
+                r.append(i[0])
+            result.append(r)
+        result.append(i)
+    return result
     raise NotImplementedError("Part 3: implement ascending_pairs")
 
 
 # Part 4: add_prices
 def add_prices(first: data.Price, second: data.Price) -> data.Price:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
+    cents=first.cents+second.cents
+    dollars=first.dollars+second.dollars
+    cents=cents % 100
+    return data.Price(dollars,cents)
     raise NotImplementedError("Part 4: implement add_prices")
 
 
